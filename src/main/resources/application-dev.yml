@@ -3,11 +3,11 @@ server:
   servlet:
     context-path: /pc-club
 spring:
-  datasource:
-    driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://124.221.116.183:8898/Jinyan
-    username: root
-    password: 
+#  datasource:
+#    driver-class-name: org.mariadb.jdbc.Driver
+#    url: jdbc:mariadb://124.221.116.183:8898/Jinyan
+#    username: root
+#    password:
 # mysqlPlus 配置
 mybatis-plus:
   mapper-locations: classpath:mapper/*.xml
