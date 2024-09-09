@@ -1,5 +1,7 @@
 package com.pc.club.BcClub.service;
 
+import java.util.Set;
+
 /**
  * @Description
  * @Author jyWei
@@ -15,7 +17,7 @@ public interface SecrecyService {
      * @param token token
      * @param special special
      */
-    void insertResource(String token,  Boolean special);
+    Set<String> insertResource(String token, Boolean special);
 
     /**
      * 获取答案

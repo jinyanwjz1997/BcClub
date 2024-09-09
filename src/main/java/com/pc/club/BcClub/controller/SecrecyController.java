@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.Set;
 
 /**
  * @Description
@@ -24,12 +25,11 @@ public class SecrecyController {
     private SecrecyService secrecyService;
 
     @GetMapping("add-token")
-    public Response<String> addToken(@RequestParam String token, @RequestParam(required = false) Boolean special) {
+    public Response<Set<String>> addToken(@RequestParam String token, @RequestParam(required = false) Boolean special) {
         if (null == special) {
             special = false;
         }
-        secrecyService.insertResource(token, special);
-        return Response.success("");
+        return Response.success(secrecyService.insertResource(token, special));
     }
     //
     @GetMapping("getAnswer")
